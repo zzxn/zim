@@ -18,5 +18,7 @@ A lightweight neovim config (for win + WSL2).
     * python: `:CocInstall coc-pyright`
     * markdown: `:CocInstall coc-webview` `:CocInstall coc-markdown-preview-enhanced`
     * git: `:CocInstall coc-git`
+    * type `(`, got `()`: `:CocInstall coc-pairs`
+    * shell `:CocInstall coc-sh`
 
 
