@@ -13,6 +13,7 @@ A lightweight neovim config (for win + WSL2).
 
 * Open nvim and run `PackerSync`
 * If with github access problem, just `export https_proxy...` to use a proxy
+* run `:checkhealth` to check health.
 * Add support for languages:
     * go: `:CocInstall coc-go`
     * python: `:CocInstall coc-pyright`
