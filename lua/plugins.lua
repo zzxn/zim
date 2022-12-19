@@ -23,6 +23,13 @@ return require('packer').startup(function()
             vim.g.vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
             end
         }
+    use {
+        'SirVer/ultisnips',
+        ft = 'tex', opt = true
+    }
+    use {
+        'honza/vim-snippets'
+    }
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
     use 'kdheepak/lazygit.nvim'
@@ -39,4 +46,8 @@ return require('packer').startup(function()
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use {
+      'stevearc/aerial.nvim',
+      config = function() require('aerial').setup() end
+    }
 end)

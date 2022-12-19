@@ -30,11 +30,11 @@ map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 map("n", "<leader>mdp", ":CocCommand markdown-preview-enhanced.openPreview<CR>", opt)
 
 -- lazygit.nvim
-map("n", "<leader>gg", ":LazyGit<CR>", opt)
+map("n", "<leader>lg", ":LazyGit<CR>", opt)
 
 -- term
-map("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", opt)
-map("t", "<Esc>", "<C-\\><C-n>", opt)
+-- map("n", "<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", opt)
+-- map("t", "<Esc>", "<C-\\><C-n>", opt)
 
 -- floating tip
 map("i", "<TAB>", "pumpvisible() ? '<C-n>' : '<TAB>'", {noremap = true, silent = true, expr = true})
@@ -44,3 +44,6 @@ map("i", "<CR>", "pumpvisible() ? coc#_select_confirm() : '<C-G>u<CR><C-R>=coc#o
 --test
 -- map("n", "<leader>kk", "i", {noremap=true})
 -- map("n", "<leader>ll", ":NvimTreeToggle<CR>", opt)
+
+-- aerial
+map('n', '<leader>t', '<cmd>AerialToggle!<CR>', opt)
