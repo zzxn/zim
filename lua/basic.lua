@@ -74,4 +74,4 @@ vim.o.showtabline = 4
 
 vim.opt.termguicolors = true
 
-vim.highlight.on_yank({higroup="IncSearch", timeout="300"})
+vim.highlight.on_yank({ higroup = "IncSearch", timeout = "300" })

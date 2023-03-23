@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 local map = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true}
+local opt = { noremap = true, silent = true }
 
 -- screen split
 map("n", "sv", ":vsp<CR>", opt)
@@ -30,4 +30,3 @@ map("n", "<leader>lg", ":LazyGit<CR>", opt)
 
 -- aerial
 map('n', '<leader>t', '<cmd>AerialToggle!<CR>', opt)
-
