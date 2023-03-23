@@ -87,4 +87,10 @@ return require('packer').startup(function()
             { 'junegunn/fzf.vim' }, -- to enable preview (optional)
         },
     }
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 end)
