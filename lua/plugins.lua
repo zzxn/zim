@@ -11,9 +11,14 @@ return require('packer').startup(function()
         'akinsho/bufferline.nvim', 
         requires = 'kyazdani42/nvim-web-devicons'
     }
+    -- use {
+    --     'neoclide/coc.nvim', 
+    --     branch = 'release'
+    -- }
     use {
-        'neoclide/coc.nvim', 
-        branch = 'release'
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
     }
     use {
         'lervag/vimtex', 
@@ -61,4 +66,11 @@ return require('packer').startup(function()
             })
         end
     })
+    use { 'mfussenegger/nvim-lint' }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-path' }
+    use { 'hrsh7th/cmp-cmdline' }
+    use { 'hrsh7th/nvim-cmp' }
+    use { 'quangnguyen30192/cmp-nvim-ultisnips' }
 end)
