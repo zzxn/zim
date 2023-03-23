@@ -80,4 +80,11 @@ return require('packer').startup(function()
     use { 'hrsh7th/cmp-cmdline' }
     use { 'hrsh7th/nvim-cmp' }
     use { 'quangnguyen30192/cmp-nvim-ultisnips' }
+    use {
+        'ojroques/nvim-lspfuzzy',
+        requires = {
+            { 'junegunn/fzf' },
+            { 'junegunn/fzf.vim' }, -- to enable preview (optional)
+        },
+    }
 end)

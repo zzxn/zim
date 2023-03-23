@@ -9,6 +9,7 @@ lua require('plugin-config/lualine')
 lua require('plugin-config/lspconfig')
 lua require('plugin-config/nvim-lint')
 lua require('plugin-config/nvim-cmp')
+lua require('plugin-config/lspfuzzy')
 set background=dark
 colorscheme zephyr
 
