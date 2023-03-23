@@ -8,6 +8,7 @@ require("mason-lspconfig").setup {
         "gopls",
         "jedi_language_server",
         "ltex",
+        "bashls",
     }
 }
 
@@ -29,7 +30,17 @@ lspconfig.jedi_language_server.setup {
 }
 
 -- Latex / Markdown
-lspconfig.ltex.setup{}
+lspconfig.ltex.setup {
+    capabilities = capabilities,
+    settings = {
+        ltex = {
+            language = "zh-CN",
+        },
+    },
+}
+
+-- Bash
+lspconfig.bashls.setup {}
 
 -- Lua
 lspconfig.lua_ls.setup {
