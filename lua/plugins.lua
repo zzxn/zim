@@ -93,4 +93,10 @@ return require('packer').startup(function()
             require('gitsigns').setup()
         end
     }
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup()
+        end
+    }
 end)
