@@ -15,6 +15,12 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
+-- for mac, we use Command as Alt
+map("n", "<D-h>", "<C-w>h", opt)
+map("n", "<D-j>", "<C-w>j", opt)
+map("n", "<D-k>", "<C-w>k", opt)
+map("n", "<D-l>", "<C-w>l", opt)
+
 -- nvim tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 

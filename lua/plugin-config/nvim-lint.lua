@@ -4,6 +4,7 @@ return function()
 		lua = { "codespell" },
 		markdown = { "codespell" },
 		python = { "codespell" },
+        proto = { "bufls" },
 	}
 	vim.cmd([[autocmd BufEnter,BufWritePost *.go lua require("lint").try_lint()]])
 end

@@ -9,6 +9,7 @@ require("mason-lspconfig").setup {
         "jedi_language_server",
         "ltex",
         "bashls",
+        "bufls"
     }
 }
 
@@ -21,6 +22,11 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Golang
 lspconfig.golangci_lint_ls.setup {}
 lspconfig.gopls.setup {
+    capabilities = capabilities,
+}
+
+-- Protobuf
+lspconfig.bufls.setup {
     capabilities = capabilities,
 }
 

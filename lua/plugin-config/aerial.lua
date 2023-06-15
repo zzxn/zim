@@ -5,10 +5,10 @@ require('aerial').setup({
         vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>', {buffer = bufnr})
         vim.keymap.set('n', '}', '<cmd>AerialNext<CR>', {buffer = bufnr})
     end,
-    open_automatic = true
+    open_automatic = false -- it's anoying in multi-screens
     -- open_automatic = function(bufnr)
     --     -- Enforce a minimum line count
-    --     return vim.api.nvim_buf_line_count(bufnr) > 10 
+    --     return vim.api.nvim_buf_line_count(bufnr) > 10
     --         -- Enforce a minimum symbol count
     --         and aerial.num_symbols(bufnr) > 4
     --         -- A useful way to keep aerial closed when closed manually

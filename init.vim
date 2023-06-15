@@ -10,6 +10,7 @@ lua require('plugin-config/lspconfig')
 lua require('plugin-config/nvim-lint')
 lua require('plugin-config/nvim-cmp')
 lua require('plugin-config/lspfuzzy')
+lua require('plugin-config/hop')
 set background=dark
 colorscheme zephyr
 
@@ -27,7 +28,12 @@ if system('uname -r') =~ "Microsoft"
         autocmd!
         autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
         augroup END
+else
+    " use clipboard
+    set clipboard+=unnamedplus
 endif
+
+let $BAT_THEME = 'Monokai Extended'
 
 " Mapping for Telescope
 " Find files using Telescope command-line sugar.
@@ -43,3 +49,5 @@ autocmd FileType go imap <buffer> <F5> <esc>:w<CR>:exec '!go run' shellescape(@%
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
+" zzxn: for hop
+nnoremap <leader>hw <cmd>HopWord<cr>

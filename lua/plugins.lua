@@ -43,7 +43,13 @@ return require('packer').startup(function()
     --     ft = 'tex', opt = true
     -- }
     use 'junegunn/fzf'
+    -- Note: fzf.vim enables preview in the window for gr, gd, etc...
+    -- You can install bat for syntax-highlighted preview
     use 'junegunn/fzf.vim'
+    use { 'ibhagwan/fzf-lua',
+        -- optional for icon support
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
     use 'kdheepak/lazygit.nvim'
     use {
         'nvim-lualine/lualine.nvim',
@@ -97,6 +103,14 @@ return require('packer').startup(function()
         'windwp/nvim-autopairs',
         config = function()
             require('nvim-autopairs').setup()
+        end
+    }
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     }
 end)
