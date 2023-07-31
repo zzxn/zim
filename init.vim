@@ -49,5 +49,10 @@ autocmd FileType go imap <buffer> <F5> <esc>:w<CR>:exec '!go run' shellescape(@%
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
+autocmd FileType go call Go_settings()
+function! Go_settings()
+  setlocal smarttab
+endfunction
+
 " zzxn: for hop
 nnoremap <leader>hw <cmd>HopWord<cr>

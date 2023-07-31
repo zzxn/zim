@@ -23,6 +23,7 @@ map("n", "<D-l>", "<C-w>l", opt)
 
 -- nvim tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
+map('n', '<C-e>', ':NvimTreeFindFile<CR>', opt)
 
 -- bufferline
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
