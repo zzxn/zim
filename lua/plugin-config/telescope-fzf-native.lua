@@ -11,10 +11,14 @@ require('telescope').setup {
         }
     },
     defaults = {
-        -- path_display = { "shorten" }
-        wrap_results = true
+        path_display = { "smart" }
+        -- wrap_results = true
     }
 }
+
+-- require("telescope.builtin").find_files{ path_display = { "smart" } }
+
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
+

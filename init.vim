@@ -11,6 +11,8 @@ lua require('plugin-config/nvim-lint')
 lua require('plugin-config/nvim-cmp')
 lua require('plugin-config/lspfuzzy')
 lua require('plugin-config/hop')
+lua require('plugin-config/neogit')
+lua require('plugin-config/nvim-treesitter')
 set background=dark
 colorscheme zephyr
 

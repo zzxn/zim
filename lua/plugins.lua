@@ -1,7 +1,10 @@
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'glepnir/zephyr-nvim'
+    use({
+        'glepnir/zephyr-nvim',
+        requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
+    })
     use 'tpope/vim-commentary'
     use {
         'kyazdani42/nvim-tree.lua',
@@ -50,7 +53,7 @@ return require('packer').startup(function()
         -- optional for icon support
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
-    use 'kdheepak/lazygit.nvim'
+    -- use 'kdheepak/lazygit.nvim' -- it's too slow
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -96,7 +99,7 @@ return require('packer').startup(function()
     use {
         'lewis6991/gitsigns.nvim',
         config = function()
-            require('gitsigns').setup{
+            require('gitsigns').setup {
                 current_line_blame = true
             }
         end
@@ -107,6 +110,7 @@ return require('packer').startup(function()
             require('nvim-autopairs').setup()
         end
     }
+
     use {
         'phaazon/hop.nvim',
         branch = 'v2', -- optional but strongly recommended
@@ -114,5 +118,14 @@ return require('packer').startup(function()
             -- you can configure Hop the way you like here; see :h hop-config
             require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
+    }
+
+    use {
+        'NeogitOrg/neogit',
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-telescope/telescope.nvim' },
+            { 'sindrets/diffview.nvim' },
+        }
     }
 end)

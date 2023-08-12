@@ -17,4 +17,5 @@ A lightweight neovim config (for win + WSL2).
 * Add support for languages:
     - most of things will be automatically installed 
     - use `:Mason` to check language support
+* Install treesitter for highlight TSInstall <name>
 
