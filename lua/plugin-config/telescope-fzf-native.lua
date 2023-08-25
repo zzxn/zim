@@ -11,7 +11,8 @@ require('telescope').setup {
         }
     },
     defaults = {
-        path_display = { "smart" }
+        path_display = { "smart" },
+        show_line = false
         -- wrap_results = true
     }
 }

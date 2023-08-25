@@ -9,7 +9,6 @@ lua require('plugin-config/lualine')
 lua require('plugin-config/lspconfig')
 lua require('plugin-config/nvim-lint')
 lua require('plugin-config/nvim-cmp')
-lua require('plugin-config/lspfuzzy')
 lua require('plugin-config/hop')
 lua require('plugin-config/neogit')
 lua require('plugin-config/nvim-treesitter')
@@ -43,6 +42,10 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap gr <cmd>Telescope lsp_references show_line=false include_delaration=false<cr>
+nnoremap gd <cmd>Telescope lsp_definitions show_line=false<cr>
+nnoremap gi <cmd>Telescope lsp_implementations show_line=false<cr>
+nnoremap S <cmd>Telescope spell_suggest<cr>
 
 
 " zzxn: Quickly Run
