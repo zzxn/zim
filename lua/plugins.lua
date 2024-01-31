@@ -121,4 +121,5 @@ return require('packer').startup(function()
             { 'sindrets/diffview.nvim' },
         }
     }
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)

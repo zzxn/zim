@@ -20,9 +20,24 @@ local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Golang
-lspconfig.golangci_lint_ls.setup {}
+lspconfig.golangci_lint_ls.setup {
+    init_options = {
+        command = { "golangci-lint", "run",
+            "--out-format", "json",
+            "--enable", "asasalint", "errorlint", "exhaustive", "exhaustruct", "exportloopref", "predeclared",
+        }
+    }
+}
+
 lspconfig.gopls.setup {
     capabilities = capabilities,
+    settings = {
+        gopls = {
+            env = {
+                GOFLAGS = "-tags=db_testing,local_testing"
+            },
+        }
+    }
 }
 
 -- Protobuf

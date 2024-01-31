@@ -11,10 +11,13 @@ require('telescope').setup {
         }
     },
     defaults = {
-        path_display = { "smart" },
+        -- path_display = { "smart" },
         show_line = false,
         preview = {
             treesitter = false
+        },
+        layout_config = {
+            preview_width = 0.4
         }
     }
 }
