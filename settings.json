@@ -1,0 +1,66 @@
+{
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.accessibilitySupport": "off",
+  "window.zoomLevel": 1,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "redhat.telemetry.enabled": true,
+  "files.autoSave": "afterDelay",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.smartRelativeLine": true,
+  "vim.insertModeKeyBindings": [
+
+  ],
+  // https://code.visualstudio.com/docs/getstarted/keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<C-H>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<C-L>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["H"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["[", "g"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["]", "g"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.easymotion": true, // <leader> <leader> w/b to show motion position forward/backward
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+}
