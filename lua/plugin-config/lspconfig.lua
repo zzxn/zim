@@ -18,6 +18,13 @@ require("mason-lspconfig").setup {
 -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.workspace = {
+    {
+        didChangeWatchedFiles = {
+            dynamicRegistration = true
+        }
+    }
+}
 
 -- Golang
 lspconfig.golangci_lint_ls.setup {
@@ -86,6 +93,11 @@ lspconfig.lua_ls.setup {
             },
         },
     },
+}
+
+-- Rust
+lspconfig.rust_analyzer.setup {
+    capabilities = capabilities,
 }
 
 -- Global mappings.
