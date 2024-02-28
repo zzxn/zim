@@ -6,7 +6,8 @@ require("mason-lspconfig").setup {
         "lua_ls",
         "golangci_lint_ls",
         "gopls",
-        "jedi_language_server",
+        "pyright",
+        "solidity",
         "ltex",
         "bashls",
         "bufls"
